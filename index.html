@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSTR Model</title>
+		<link href="css/style.css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="Wrapper">
+            <div class="relLeft">
+                <div id="container"> </div>
+                <button type="button" id="zoomButton" onclick="zoom();"> Zoom </button>
+                <button type="button" id="unzoomButton" onclick="unzoom();" style="visibility: hidden"> Unzoom </button>
+            </div>
+            <div class="values">
+                <h3> Current values </h3>
+                <p id="x"></p>
+                <p id="eps" style="display: none"></p>
+                <p id="xplus"></p>
+                <p id="count"></p>
+            </div>
+            <div id="buttonWrapper">
+                <button type="button" id="nextStep" onclick="addDataPoint();">Next Step</button>
+                <br>
+                <button type="button" id="prevStep" onclick="removePoint();">Previous Step</button>
+                <br>
+                <br>
+                <button type="button" id="playButton" onclick="startAnimation();"> Play </button>
+                <br>
+                <button type="button" id="stopButton" onclick="stopAnimation();"> Pause </button>
+                <br>
+                <button type="button" id="resetButton" onclick="reset();"> Reset </button>
+                <br>
+                            
+            </div>
+            <h4> Speed </h4>
+            <input id="speedSlider" type="range" step="50" min="0" max="1000" value="500" onchange="changeSpeed();">
+        </div>
+		
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/highcharts.js"></script>
+        <script type="text/javascript" src="js/matlab.js"></script>
+        <script type="text/javascript" src="js/graph.js"></script>
+        <script type="text/javascript" src="js/dom.js"></script>
+	</body>
+</html>
